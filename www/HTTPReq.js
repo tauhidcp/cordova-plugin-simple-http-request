@@ -6,6 +6,8 @@
  * 
  */
 
+var exec = require('cordova/exec');
+
 module.exports = { 
 	getData:function(addr, onSuccess, onError){ 
 		var xhr = new XMLHttpRequest();
@@ -51,5 +53,8 @@ module.exports = {
 			}
 			}
 			xhr.send(formData);
+	},
+	downloadFile:function(addr, output, onSuccess, onError){ 
+		exec(onSuccess, onError, 'HTTPReq', 'downloadFile', [addr, output]);
 	}
 };
