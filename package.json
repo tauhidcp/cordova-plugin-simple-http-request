@@ -1,7 +1,7 @@
 {
   "name": "id.my.tauhidslab.httpreq",
   "version": "0.1.0",
-  "description": "cordova plugin to execute http request like get, post and upload file to server",
+  "description": "cordova plugin to execute htpp request like get, post, upload file to server and download file from server",
   "cordova": {
     "id": "id.my.tauhidslab.httpreq",
     "platforms": []
