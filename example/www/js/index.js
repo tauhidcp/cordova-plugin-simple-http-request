@@ -23,6 +23,7 @@ document.addEventListener('deviceready', onDeviceReady, false);
 document.getElementById("getData").addEventListener("click", getData);
 document.getElementById("postData").addEventListener("click", postData);
 document.getElementById("uploadFile").addEventListener("click", uploadFile);
+document.getElementById("downloadFile").addEventListener("click", downloadFile);
 
 function onDeviceReady() {
     // Cordova is now initialized. Have fun!
@@ -81,6 +82,23 @@ function uploadFile(){
 	var name     = "myfile";
 	
 	HTTPReq.uploadFile(file, name, addr, onSuccess, onError);
+	
+	function onSuccess(s){
+		alert(s);
+	}
+	
+	function onError(e){
+		alert(e);
+	}
+	
+}
+
+function downloadFile(){
+	
+	var addr   = "http://192.168.1.7/simplehttp/download/sample.pdf";
+	var output = "download_sample.pdf"; // Output name in Download Folder
+	
+	HTTPReq.downloadFile(addr, output, onSuccess, onError);
 	
 	function onSuccess(s){
 		alert(s);
