@@ -68,6 +68,10 @@ function getData(){
 	
 	function onSuccess(s){
 		alert(s);
+		
+		// JSON output
+		// var rs = JSON.parse(s);
+		// alert("Nama :"+rs['nama']+"\n Nohp :"+rs['nohp']+"\n Alamat :"+rs['alamat']);
 	}
 	
 	function onError(e){
