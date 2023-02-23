@@ -5,16 +5,15 @@
         <clobbers target="HTTPReq" />
     </js-module>
 	<platform name="android">
-		<config-file file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
-			<application android:usesCleartextTraffic="true" />
-		</config-file>
 		<config-file parent="/*" target="res/xml/config.xml">
 			<preference name="AndroidInsecureFileModeEnabled" value="true"/>
 		</config-file>
-		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
 		<config-file target="AndroidManifest.xml" parent="/*">
 			<uses-permission android:name="android.permission.INTERNET" />
 			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+		</config-file>
+		<config-file file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
+			<application android:usesCleartextTraffic="true" />
 		</config-file>
 	</platform>
 </plugin>
