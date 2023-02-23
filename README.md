@@ -1,6 +1,6 @@
 # cordova-plugin-simple-http-request
 
-cordova plugin to execute http request like get, post and upload file to server. Basically, this plugin implemented from Ajax to allow HTTP Request from cordova application. This plugin is pure JavaScript and is specific to simple needs. for complex needs you may use another plugin
+cordova plugin to execute http request like get, post, upload file to server and download file from server through HTTP. Basically, this plugin implemented from Ajax to allow HTTP Request from cordova application. This plugin is specific to simple needs. for complex needs you may use another plugin
 
 ### Tested on:
 
@@ -8,7 +8,8 @@ cordova plugin to execute http request like get, post and upload file to server.
 - Cordova 	      : 11.1.0
 - cordova-android : 11.0 
 - Java 11 
-- PHP 8.1.12 (Xampp) 
+- PHP 8.1.12 (Xampp)
+- Apache 2.4 (Xampp) 
 
 
 ### Install/Uninstall
@@ -162,6 +163,29 @@ function uploadFile(){
 	var name     = "myfile";
 	
 	HTTPReq.uploadFile(file, name, addr, onSuccess, onError);
+	
+	function onSuccess(s){
+		alert(s);
+	}
+	
+	function onError(e){
+		alert(e);
+	}
+	
+}
+```
+
+### Example HTTP Download File 
+
+1. Example Cordova Script to download file from server 
+
+```
+function downloadFile(){
+	
+	var addr   = "http://192.168.1.7/simplehttp/download/sample.pdf";
+	var output = "download_sample.pdf"; // Output name in Download Folder
+	
+	HTTPReq.downloadFile(addr, output, onSuccess, onError);
 	
 	function onSuccess(s){
 		alert(s);
