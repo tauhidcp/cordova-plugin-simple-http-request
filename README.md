@@ -41,7 +41,7 @@ Then, make sure your device has connected to server. Simply test connection usin
 
 ### Example HTTP Get 
 
-1. Simple Server script to print String using PHP like follow (**simple_get.php**)
+1. Simple Server script to print String using PHP (**simple_get.php**)
 
 ```
 <?php
@@ -53,7 +53,7 @@ echo "Balasan dari Server";
 ?>
 ```
 
-2. Client script Get Data From server using this plugin as follow (Cordova) 
+2. Client script Get Data From server using this plugin (Cordova) 
 
 ```
 function getData(){
@@ -76,7 +76,7 @@ function getData(){
 
 ### Example HTTP Post 
 
-1. Server Side to Handle User Input from Post Method (**simple_post.php**) like follow
+1. Server Side to Handle User Input from Post Method (**simple_post.php**) 
 
 ```
 <?php
@@ -117,7 +117,7 @@ function postData(){
 
 ### Example HTTP Upload File 
 
-1. Server Script (PHP) to handle Upload File like follow (**simple_upload.php**)
+1. Server Script (PHP) to handle Upload File (**simple_upload.php**)
 
 ```
 <?php
@@ -145,7 +145,7 @@ function postData(){
 ?>
 ```
 
-2. Client script to upload file from Cordova like follow
+2. Client script to upload file from Cordova 
 
 ```
 function uploadFile(){
