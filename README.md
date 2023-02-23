@@ -13,6 +13,21 @@ cordova plugin to execute http request like get, post and upload file to server.
 
 ### Install/Uninstall
 
+install from github repository using this command
+```
+cordova plugin add https://github.com/tauhidcp/cordova-plugin-simple-http-request.git
+```
+or install from npmjs package using this command 
+```
+cordova plugin add id.my.tauhidslab.httpreq
+```
+
+uninstall using this command
+```
+cordova plugin rm id.my.tauhidslab.httpreq
+```
+
+
 ### How to Use
 
 First of all, we need to allow Javascript and Ajax Script from Cordova Application. Replace your **Content-Security-Policy** in **index.html** file with following tag
@@ -32,6 +47,8 @@ Then, make sure your device has connected to server. Simply test connection usin
 <?php
 
 echo "Balasan dari Server";
+
+// echo "Nama Anda ". $_GET['user']; // Get Parameter
 
 ?>
 ```
