@@ -35,11 +35,15 @@ function onDeviceReady() {
 function getData(){
 	
 	var addr = "http://192.168.1.7/simplehttp/simple_get.php";
-// var addr = "http://192.168.1.7/simplehttp/simple_get.php?user=budi"; // Get With Parameter
+	// var addr = "http://192.168.1.7/simplehttp/simple_get.php?user=budi"; // Get With Parameter
 	HTTPReq.getData(addr, onSuccess, onError);
 	
 	function onSuccess(s){
 		alert(s);
+		
+		// JSON output
+		// var rs = JSON.parse(s);
+		// alert("Nama :"+rs['nama']+"\n Nohp :"+rs['nohp']+"\n Alamat :"+rs['alamat']);
 	}
 	
 	function onError(e){
