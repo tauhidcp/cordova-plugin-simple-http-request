@@ -9,11 +9,16 @@
 			<application android:usesCleartextTraffic="true" />
 		</config-file>
 		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="HTTPReq">
+				<param name="android-package" value="id.my.tauhidslab.httpreq.HTTPReq" />
+			</feature>
 			<preference name="AndroidInsecureFileModeEnabled" value="true"/>
 		</config-file>
 		<config-file target="app/src/main/AndroidManifest.xml" parent="/manifest">
 			<uses-permission android:name="android.permission.INTERNET" />
 			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 		</config-file>
+		<source-file src="src/android/HTTPReq.java" target-dir="src/id/my/tauhidslab/httpreq" />
 	</platform>
 </plugin>
