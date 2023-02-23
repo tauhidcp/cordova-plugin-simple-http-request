@@ -1,0 +1,22 @@
+{
+  "name": "id.my.tauhidslab.httpreq",
+  "version": "0.1.0",
+  "description": "cordova plugin to execute htpp request like get, post and upload file to server",
+  "cordova": {
+    "id": "id.my.tauhidslab.httpreq",
+    "platforms": []
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tauhidcp/cordova-plugin-simple-http-request.git"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Ahmad Tauhid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tauhidcp/cordova-plugin-simple-http-request/issues"
+  },
+  "homepage": "https://github.com/tauhidcp/cordova-plugin-simple-http-request#readme"
+}
